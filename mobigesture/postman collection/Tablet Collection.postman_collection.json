@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "8f949ec8-9585-429f-8b17-b2059d7c9139",
+		"name": "Tablet Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddTablet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"abc\",\n    \"brand\": \"def\",\n    \"price\" :\"100\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/add/tablet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"add",
+						"tablet"
+					]
+				},
+				"description": "when creating a course assign any one of Pricing strategy\r\n\r\npossible values of Pricing strategy \r\n \r\n free=0,\r\n oneTimePayment=1,\r\n subscription=2\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getTablet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/get/tablet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"get",
+						"tablet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTabletByPageble",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/tablet/pageablebybrand?brand=accer&page=1&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"tablet",
+						"pageablebybrand"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "accer"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gettabletByPagebleBrand",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/tablet/pageable?brand=accer&page=1&size=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"tablet",
+						"pageable"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "accer"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gettabletByPageblebypricegreaterthan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/phone/pageable/bypricegreaterthan?price=300&page=0&size=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"phone",
+						"pageable",
+						"bypricegreaterthan"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "300"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findTabletById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"courseId\" :\"4\",\r\n\t\"citizenType\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/tablet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"tablet",
+						"1"
+					]
+				},
+				"description": "courseId = Id of a particular course\r\ncitizenType = location of user as Input(Possible values = IND, USA, DEU)"
+			},
+			"response": []
+		},
+		{
+			"name": "updateTabletById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abc\",\r\n    \"brand\": \"def\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/tablet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"tablet",
+						"1"
+					]
+				},
+				"description": "courseId = Id of a particular course\r\ncitizenType = location of user as Input(Possible values = IND, USA, DEU)"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTabletbyId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"courseId\" :\"2\",\r\n\t\"citizenType\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/product/tablet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"product",
+						"tablet",
+						"1"
+					]
+				},
+				"description": "courseId = Id of a particular course\r\ncitizenType = location of user as Input(Possible values = IND, USA, DEU)"
+			},
+			"response": []
+		}
+	]
+}
